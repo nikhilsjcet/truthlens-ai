@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="60%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#93c5fd"/>
+    </linearGradient>
+    <linearGradient id="mountains" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="snow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <linearGradient id="lake" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0c4a6e"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="70%" cy="25%" r="30%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="40%" stop-color="#fde047" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" result="noise"/>
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.08 0"/>
+      <feComposite in2="SourceGraphic" in="gl" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#sky)"/>
+  <circle cx="840" cy="200" r="180" fill="url(#sun)"/>
+
+  <!-- Distant mountain range -->
+  <polygon points="100,550 350,220 520,550" fill="url(#mountains)"/>
+  <polygon points="320,265 350,220 380,265 350,290" fill="url(#snow)"/>
+
+  <polygon points="380,550 620,180 840,550" fill="#1e293b"/>
+  <polygon points="580,235 620,180 660,235 620,270" fill="url(#snow)"/>
+
+  <polygon points="700,550 940,260 1180,550" fill="url(#mountains)"/>
+  <polygon points="900,310 940,260 980,310 940,335" fill="url(#snow)"/>
+
+  <!-- Foothills -->
+  <path d="M0,520 Q300,440 600,500 T1200,480 L1200,800 L0,800 Z" fill="#064e3b" opacity="0.85"/>
+  <path d="M0,560 Q400,520 800,560 T1200,530 L1200,800 L0,800 Z" fill="#065f46"/>
+
+  <!-- Alpine lake -->
+  <rect y="580" width="1200" height="220" fill="url(#lake)"/>
+
+  <!-- Reflection -->
+  <ellipse cx="620" cy="620" rx="140" ry="12" fill="#38bdf8" opacity="0.3"/>
+  <ellipse cx="840" cy="640" rx="90" ry="8" fill="#fef08a" opacity="0.4"/>
+
+  <!-- Foreground shoreline & pine trees -->
+  <polygon points="120,720 140,610 160,720" fill="#022c22"/>
+  <polygon points="130,680 140,600 150,680" fill="#064e3b"/>
+  <polygon points="170,750 195,620 220,750" fill="#022c22"/>
+  <polygon points="980,730 1010,590 1040,730" fill="#022c22"/>
+  <polygon points="1040,750 1070,630 1100,750" fill="#022c22"/>
+
+  <!-- Authentic sensor noise overlay simulation -->
+  <rect width="1200" height="800" filter="url(#noise)" opacity="0.5"/>
+
+  <!-- Camera HUD overlay watermark -->
+  <rect x="30" y="30" width="340" height="70" rx="8" fill="#000000" fill-opacity="0.6"/>
+  <text x="50" y="60" fill="#22d3ee" font-family="monospace" font-size="16" font-weight="bold">NIKON D850 RAW CAPTURE</text>
+  <text x="50" y="82" fill="#94a3b8" font-family="monospace" font-size="13">70mm • f/2.8 • 1/500s • ISO 200</text>
+</svg>

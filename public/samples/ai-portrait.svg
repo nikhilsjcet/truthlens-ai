@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <defs>
+    <radialGradient id="cyberbg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#311042"/>
+      <stop offset="60%" stop-color="#180728"/>
+      <stop offset="100%" stop-color="#05010a"/>
+    </radialGradient>
+    <linearGradient id="faceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa"/>
+      <stop offset="50%" stop-color="#fdba74"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <linearGradient id="neonGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <!-- Latent diffusion checkerboard artifact filter simulation -->
+    <pattern id="checker" width="16" height="16" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#a855f7" fill-opacity="0.04"/>
+      <rect x="8" y="8" width="8" height="8" fill="#06b6d4" fill-opacity="0.04"/>
+    </pattern>
+  </defs>
+
+  <rect width="1000" height="1000" fill="url(#cyberbg)"/>
+
+  <!-- Halo glow -->
+  <circle cx="500" cy="480" r="340" fill="url(#neonGlow)" opacity="0.25" filter="blur(40px)"/>
+
+  <!-- AI synthetic character silhouette & face -->
+  <path d="M300,900 C300,750 360,650 500,650 C640,650 700,750 700,900 Z" fill="#1e1b4b"/>
+  
+  <!-- Head -->
+  <ellipse cx="500" cy="460" rx="190" ry="240" fill="url(#faceGrad)"/>
+
+  <!-- Synthetic hypersmooth skin highlight -->
+  <ellipse cx="500" cy="460" rx="140" ry="190" fill="#ffedd5" opacity="0.4"/>
+
+  <!-- AI Glitch Hair (strands dissolving into background) -->
+  <path d="M300,450 C260,280 400,200 500,200 C600,200 740,280 700,450 C740,490 730,680 700,720 C650,600 680,480 650,420 C580,240 420,240 350,420 C320,480 350,600 300,720 C270,680 260,490 300,450 Z" fill="#3b0764"/>
+  <path d="M380,220 C420,150 580,150 620,220 C560,190 440,190 380,220 Z" fill="#9333ea"/>
+
+  <!-- Eyes - displaying synthetic asymmetry -->
+  <!-- Left Eye: circular iris -->
+  <ellipse cx="430" cy="440" rx="32" ry="18" fill="#ffffff"/>
+  <circle cx="430" cy="440" r="14" fill="#0284c7"/>
+  <circle cx="433" cy="438" r="6" fill="#0f172a"/>
+  <circle cx="435" cy="436" r="3" fill="#ffffff"/> <!-- Catchlight 1 -->
+
+  <!-- Right Eye: slightly warped iris and contradictory catchlight angle -->
+  <path d="M538,440 Q570,420 602,440 Q570,460 538,440 Z" fill="#ffffff"/>
+  <ellipse cx="570" cy="440" rx="15" ry="13" fill="#0284c7"/>
+  <circle cx="568" cy="442" r="6" fill="#0f172a"/>
+  <circle cx="563" cy="444" r="3" fill="#ffffff"/> <!-- Contradictory catchlight! -->
+
+  <!-- Synthetic smoothed nose -->
+  <path d="M495,440 L490,520 L515,520 Z" fill="#ea580c" opacity="0.3"/>
+
+  <!-- Perfectly symmetric AI lips -->
+  <path d="M450,560 Q500,545 550,560 Q500,600 450,560 Z" fill="#e11d48"/>
+  <path d="M450,560 Q500,570 550,560 Q500,585 450,560 Z" fill="#be123c"/>
+
+  <!-- Subtle latent diffusion grid overlay -->
+  <rect width="1000" height="1000" fill="url(#checker)"/>
+
+  <!-- Telemetry Badge -->
+  <rect x="30" y="30" width="380" height="70" rx="8" fill="#000000" fill-opacity="0.7"/>
+  <text x="50" y="60" fill="#f43f5e" font-family="monospace" font-size="16" font-weight="bold">SYNTHETIC DIFFUSION ARTIFACTS</text>
+  <text x="50" y="82" fill="#94a3b8" font-family="monospace" font-size="13">Midjourney v6 • Latent Upscale • No EXIF</text>
+</svg>
