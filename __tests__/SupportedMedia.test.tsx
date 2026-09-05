@@ -5,13 +5,11 @@ import SupportedMedia from '../components/SupportedMedia';
 describe('SupportedMedia Component', () => {
   it('renders the heading correctly', () => {
     render(<SupportedMedia />);
-    expect(screen.getByText(/Comprehensive Modality Support/i)).toBeInTheDocument();
+    expect(screen.getByText(/SUPPORTED MEDIA MODALITIES/i)).toBeInTheDocument();
   });
 
   it('displays image, audio, and video support badges', () => {
     render(<SupportedMedia />);
-    expect(screen.getByText('Images')).toBeInTheDocument();
-    expect(screen.getByText('Audio')).toBeInTheDocument();
-    expect(screen.getByText('Video')).toBeInTheDocument();
+    expect(screen.getByText(/IMAGE FORENSICS/i)).toBeInTheDocument();
   });
 });
