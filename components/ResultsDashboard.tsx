@@ -115,7 +115,7 @@ export default function ResultsDashboard({ result, onReset }: ResultsDashboardPr
     const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(result, null, 2));
     const downloadAnchor = document.createElement('a');
     downloadAnchor.setAttribute('href', dataStr);
-    downloadAnchor.setAttribute('download', `sookshmadarshini-forensic-${result.id}.json`);
+    downloadAnchor.setAttribute('download', `TRUELENS-forensic-${result.id}.json`);
     document.body.appendChild(downloadAnchor);
     downloadAnchor.click();
     downloadAnchor.remove();
@@ -430,7 +430,7 @@ export default function ResultsDashboard({ result, onReset }: ResultsDashboardPr
         </div>
       </div>
 
-      {/* Section 4: WHY DID SOOKSHMADARSHINI REACH THIS RESULT? (Explainability) */}
+      {/* Section 4: WHY DID TRUELENS REACH THIS RESULT? (Explainability) */}
       <div className="glass-card rounded-2xl p-6 sm:p-8 border border-cyan-900/40 mb-10">
         <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-800">
           <div className="flex items-center gap-2.5">
@@ -439,7 +439,7 @@ export default function ResultsDashboard({ result, onReset }: ResultsDashboardPr
             </div>
             <div>
               <h3 className="text-base font-bold text-white tracking-wide">
-                4. WHY DID SOOKSHMADARSHINI REACH THIS RESULT?
+                4. WHY DID TRUELENS REACH THIS RESULT?
               </h3>
               <p className="text-xs text-slate-400">
                 Transparent 5-pillar forensic reasoning chain based strictly on observed {mediaType} signals
@@ -671,7 +671,7 @@ export default function ResultsDashboard({ result, onReset }: ResultsDashboardPr
         <div className="p-4 rounded-xl bg-slate-950/80 border border-slate-800/80 text-xs text-slate-400 flex items-start gap-2.5">
           <Info className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
           <p className="leading-relaxed">
-            <strong className="text-slate-300">Forensic Disclaimer:</strong> Sookshmadarshini provides AI-assisted assessment, not definitive forensic proof. Verify important claims using independent sources.
+            <strong className="text-slate-300">Forensic Disclaimer:</strong> TRUELENS provides AI-assisted assessment, not definitive forensic proof. Verify important claims using independent sources.
           </p>
         </div>
       </div>

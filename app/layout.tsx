@@ -2,11 +2,11 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: "Sookshmadarshini AI — Don't just see it. Verify it.",
+  title: "TRUELENS AI — Don't just see it. Verify it.",
   description:
     'AI-powered multimodal media authenticity intelligence. Detect synthetic diffusion artifacts, voice clones, deepfakes, and manipulated pixels with explainable forensic evidence.',
   keywords: [
-    'Sookshmadarshini',
+    'TRUELENS',
     'AI media verification',
     'deepfake detector',
     'audio voice clone detector',
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'synthetic media detector',
     'EXIF analysis'
   ],
-  authors: [{ name: 'Sookshmadarshini AI Forensics' }],
+  authors: [{ name: 'TRUELENS AI Forensics' }],
   icons: {
     icon: '/favicon.ico'
   }

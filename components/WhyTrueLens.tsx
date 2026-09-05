@@ -3,7 +3,7 @@
 import React from 'react';
 import { Eye, ShieldCheck, Cpu, Layers } from 'lucide-react';
 
-export default function WhySookshmadarshini() {
+export default function WhyTRUELENS() {
   return (
     <section className="max-w-5xl mx-auto px-4 sm:px-6 mb-20">
       <div className="text-center mb-12">
@@ -11,11 +11,11 @@ export default function WhySookshmadarshini() {
           INTELLIGENCE BRIEFING
         </span>
         <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-3">
-          WHY SOOKSHMADARSHINI?
+          WHY TRUELENS?
         </h2>
         <p className="max-w-2xl mx-auto text-sm sm:text-base text-slate-300 mt-4 leading-relaxed">
           AI-generated content is becoming increasingly difficult to distinguish from authentic media.
-          Sookshmadarshini combines AI-assisted multimodal analysis, manipulation indicators, metadata and source context into one explainable verification workflow.
+          TRUELENS combines AI-assisted multimodal analysis, manipulation indicators, metadata and source context into one explainable verification workflow.
         </p>
       </div>
 

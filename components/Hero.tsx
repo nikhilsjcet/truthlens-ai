@@ -26,7 +26,7 @@ export default function Hero({ onAnalyzeClick, onTryDemoClick }: HeroProps) {
         {/* Title */}
         <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-6">
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-slate-400 text-3xl sm:text-5xl md:text-6xl tracking-wider">
-            SOOKSHMADARSHINI AI
+            TRUELENS AI
           </span>
           <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-blue-500">
             Don&apos;t just see it. Verify it.

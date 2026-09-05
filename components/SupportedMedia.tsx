@@ -103,7 +103,7 @@ export default function SupportedMedia() {
               <div className="mt-6 pt-4 border-t border-slate-800/80">
                 <span className="text-xs font-semibold text-cyan-400 flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-                  Active in Sookshmadarshini AI
+                  Active in TRUELENS AI
                 </span>
               </div>
             </div>

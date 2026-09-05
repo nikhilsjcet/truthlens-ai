@@ -16,7 +16,7 @@ export default function Footer() {
             </div>
             <div>
               <span className="font-bold text-white tracking-wider">
-                SOOKSHMADARSHINI <span className="text-cyan-400">AI</span>
+                TRUELENS <span className="text-cyan-400">AI</span>
               </span>
               <p className="text-[10px] text-slate-400 font-mono">
                 &quot;Don&apos;t just see it. Verify it.&quot;
@@ -26,7 +26,7 @@ export default function Footer() {
 
           {/* Ethics statement */}
           <div className="text-center md:text-left max-w-md text-[11px] text-slate-400 leading-relaxed">
-            Sookshmadarshini AI operates under open, explainable, and probabilistic verification standards.
+            TRUELENS AI operates under open, explainable, and probabilistic verification standards.
             No false certainty. Built for transparency in the GenAI era.
           </div>
 
@@ -44,7 +44,7 @@ export default function Footer() {
 
         <div className="mt-8 pt-6 border-t border-slate-900/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] text-slate-400 font-mono">
           <div>
-            &copy; {new Date().getFullYear()} Sookshmadarshini AI. All media processed securely client &amp; server side.
+            &copy; {new Date().getFullYear()} TRUELENS AI. All media processed securely client &amp; server side.
           </div>
           <div className="flex items-center gap-4">
             <span className="hover:text-cyan-400 cursor-pointer">Privacy Protocol</span>

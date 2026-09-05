@@ -7,7 +7,7 @@ import Hero from '@/components/Hero';
 import ImageUploader from '@/components/ImageUploader';
 import ForensicScanner from '@/components/ForensicScanner';
 import ResultsDashboard from '@/components/ResultsDashboard';
-import WhySookshmadarshini from '@/components/WhySookshmadarshini';
+import WhyTRUELENS from '@/components/WhyTRUELENS';
 import HowItWorks from '@/components/HowItWorks';
 import SupportedMedia from '@/components/SupportedMedia';
 import Footer from '@/components/Footer';
@@ -161,11 +161,11 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#070a12] text-slate-100 relative overflow-x-hidden">
-      {/* Background Sookshmadarshini Movie Image */}
+      {/* Background TRUELENS Movie Image */}
       <div className="fixed inset-0 pointer-events-none -z-30">
         <Image
           src="/user-bg.png"
-          alt="Sookshmadarshini Background"
+          alt="TRUELENS Background"
           fill
           className="object-cover opacity-100"
           priority
@@ -248,7 +248,7 @@ export default function Home() {
         )}
 
         {/* Content & Information Pillars */}
-        <WhySookshmadarshini />
+        <WhyTRUELENS />
         <HowItWorks />
         <SupportedMedia />
       </main>

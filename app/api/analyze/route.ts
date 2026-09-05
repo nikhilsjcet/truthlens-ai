@@ -153,7 +153,7 @@ In "whyEvidence", use categories:
 - "05 Metadata/context"`;
     }
 
-    const systemPrompt = `You are Sookshmadarshini AI, an advanced media authenticity intelligence engine.
+    const systemPrompt = `You are TRUELENS AI, an advanced media authenticity intelligence engine.
 Your task is to conduct an explainable forensic assessment of the provided ${detectedType} file to evaluate whether it is likely authentic, suspicious / manipulated, or likely AI-generated.
 
 ${mediaSpecificInstructions}
@@ -462,7 +462,7 @@ Return a strictly valid JSON object matching this schema:
       },
       recommendation:
         parsed.recommendation ||
-        'Sookshmadarshini provides an AI-assisted probabilistic assessment. Cross-verify critical claims using independent sources.',
+        'TRUELENS provides an AI-assisted probabilistic assessment. Cross-verify critical claims using independent sources.',
       analyzedMediaUrl: incomingData,
       analyzedImageUrl: incomingData,
       isDemo: false
