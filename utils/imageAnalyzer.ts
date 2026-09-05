@@ -238,12 +238,54 @@ function parseTiffHeader(view: DataView, tiffStart: number, maxBytes: number): R
 
 export function fileToBase64(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => {
-      const result = reader.result as string;
-      resolve(result);
-    };
-    reader.onerror = (error) => reject(error);
+    // If it's an image, compress it first to avoid Vercel 4.5MB payload limits (Error 413)
+    if (file.type.startsWith('image/')) {
+      const url = URL.createObjectURL(file);
+      const img = new Image();
+      img.onload = () => {
+        URL.revokeObjectURL(url);
+        
+        let width = img.naturalWidth;
+        let height = img.naturalHeight;
+        const MAX_DIMENSION = 1600; // Resize to max 1600px width/height
+        
+        if (width > MAX_DIMENSION || height > MAX_DIMENSION) {
+          if (width > height) {
+            height = Math.round((height * MAX_DIMENSION) / width);
+            width = MAX_DIMENSION;
+          } else {
+            width = Math.round((width * MAX_DIMENSION) / height);
+            height = MAX_DIMENSION;
+          }
+        }
+
+        const canvas = document.createElement('canvas');
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext('2d');
+        
+        if (ctx) {
+          ctx.drawImage(img, 0, 0, width, height);
+          // Compress to JPEG with 85% quality
+          resolve(canvas.toDataURL('image/jpeg', 0.85));
+        } else {
+          readFallback(file, resolve, reject);
+        }
+      };
+      img.onerror = () => {
+        URL.revokeObjectURL(url);
+        readFallback(file, resolve, reject);
+      };
+      img.src = url;
+    } else {
+      readFallback(file, resolve, reject);
+    }
   });
+}
+
+function readFallback(file: File, resolve: (val: string) => void, reject: (err: any) => void) {
+  const reader = new FileReader();
+  reader.readAsDataURL(file);
+  reader.onload = () => resolve(reader.result as string);
+  reader.onerror = (error) => reject(error);
 }
