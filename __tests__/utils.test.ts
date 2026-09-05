@@ -3,8 +3,8 @@ import { formatFileSize, detectMediaType } from '../utils/imageAnalyzer';
 describe('imageAnalyzer utils', () => {
   it('formats file sizes correctly', () => {
     expect(formatFileSize(0)).toBe('0 Bytes');
-    expect(formatFileSize(1024)).toBe('1.00 KB');
-    expect(formatFileSize(1048576)).toBe('1.00 MB');
+    expect(formatFileSize(1024)).toBe('1 KB');
+    expect(formatFileSize(1048576)).toBe('1 MB');
   });
 
   it('detects media types correctly', () => {
